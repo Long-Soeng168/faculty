@@ -4,91 +4,33 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Faculty AERD</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contact Us</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet" />
-    <script>
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: "#eff6ff",
-                            100: "#dbeafe",
-                            200: "#bfdbfe",
-                            300: "#93c5fd",
-                            400: "#60a5fa",
-                            500: "#3b82f6",
-                            600: "#2563eb",
-                            700: "#1d4ed8",
-                            800: "#1e40af",
-                            900: "#1e3a8a",
-                            950: "#172554",
-                        },
-                    },
-                },
-                fontFamily: {
-                    body: [
-                        "Poppins",
-                        "Roboto",
-                        "Arial",
-                        "Inter",
-                        "ui-sans-serif",
-                        "system-ui",
-                        "-apple-system",
-                        "system-ui",
-                        "Segoe UI",
-                        "Helvetica Neue",
-                    ],
-                    sans: [
-                        "Poppins",
-                        "Roboto",
-                        "Arial",
-                        "Inter",
-                        "ui-sans-serif",
-                        "system-ui",
-                        "-apple-system",
-                        "system-ui",
-                        "Segoe UI",
-                        "Helvetica Neue",
-                    ],
-                },
-            },
-        };
-    </script>
-    <script>
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (
-            localStorage.getItem("color-theme") === "dark" ||
-            (!("color-theme" in localStorage) &&
-                window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    </script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Moul&family=Siemreap&family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" />
+    <!-- <link href="./assets/style/flowbite.css" rel="stylesheet" /> -->
+    <script src="./assets/js/tailwindcss.js"></script>
+    <script src="./assets/js/tailwindConfig.js"></script>
+    <script src="./assets/js/darkModeHead.js"></script>
 </head>
 
 <body class="bg-white dark:bg-gray-900 dark:text-gray-300">
-    <!-- Nav bar -->
-    <header>
+    <!-- ================== Begin:Header ================== -->
+    <header class="md:mb-6">
         <div class="bg-white dark:bg-gray-900 border-gray-200  z-20">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-2">
-                <!-- ================== Logo ================== -->
-                <a href="./index.html" class="flex items-center">
-                    <img src="./assets/icons/logo.png" class="h-14 m-2" alt="Flowbite Logo" />
-                    <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Parrot
-                        Studio</span> -->
+                <a href="./index.html" class="flex items-center py-4">
+                    <img src="./assets/icons/logo.png" class="h-14 m-2 mr-4" alt="Logo" />
+                    <span class="md:translate-y-1 tracking-wider">
+                        <div class="hidden md:flex max-w-full text-sm lg:text-lg font-moul">
+                            មហាវិទ្យាល័យ សេដ្ឋកិច្ចកសិកម្ម និងអភិវឌ្ឍន៍ជនបទ
+                        </div>
+                        <div class="hidden md:flex max-w-full text-xs lg:text-lg font-moul">
+                            FACULTY OF AGRICULTURAL ECONOMICS AND RURAL DEVELOPMENT
+                        </div>
+                    </span>
                 </a>
-                <!-- ================== Header Action ================== -->
-                <div class="lg:order-2">
+                <div class="lg:order-2 justify-items-end">
                     <!-- Toggle Dark mode -->
                     <button id="theme-toggle" type="button"
                         class="text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
@@ -134,7 +76,7 @@
                             </li>
                         </ul>
                     </div>
-                    <!-- Toggle Menu -->
+                    <!-- Toggle Menu Drawer -->
                     <button type="button" data-drawer-target="drawer-body-scrolling"
                         data-drawer-show="drawer-body-scrolling" data-drawer-body-scrolling="true"
                         aria-controls="drawer-body-scrolling"
@@ -147,17 +89,17 @@
                         </svg>
                     </button>
                 </div>
-                <!-- ================== Navigator ================== -->
+                <!-- ================== Menu Navigator ================== -->
                 <nav class="hidden w-full min-[1200px]:block min-[1200px]:w-auto" id="navbar-default">
                     <ul
                         class="text-sm flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                        <!-- Home -->
                         <li>
-                            <a href="./index.html"
-                                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
-                                aria-current="page">Home</a>
+                            <a href="/"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                                Home
+                            </a>
                         </li>
-                        <!-- About Faculty -->
+
                         <li>
                             <button id="NavLinkDepartments" data-dropdown-toggle="dropdownNavAboutFaculty"
                                 class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
@@ -168,7 +110,7 @@
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <!-- About Faculty List -->
+                            <!-- About Faculty Lists -->
                             <div id="dropdownNavAboutFaculty"
                                 class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-fit dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
@@ -212,9 +154,7 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- End About Faculty -->
 
-                        <!-- Departments & Study Programs -->
                         <li>
                             <button id="NavLinkDepartments" data-dropdown-toggle="dropdownNavDepartments"
                                 class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
@@ -225,12 +165,11 @@
                                         stroke-width="2" d="m1 1 4 4 4-4" />
                                 </svg>
                             </button>
-                            <!-- Departments List -->
+                            <!-- Departments & Study Programs Lists -->
                             <div id="dropdownNavDepartments"
                                 class="z-50 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-60 dark:bg-gray-700 dark:divide-gray-600">
                                 <ul class="py-2 text-sm text-gray-700 dark:text-gray-400"
                                     aria-labelledby="dropdownLargeButton">
-                                    <!-- Department -->
                                     <li aria-labelledby="NavLinkDepartments">
                                         <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown"
                                             data-dropdown-placement="right-start" type="button"
@@ -265,13 +204,13 @@
                                                         Department of Agribusiness
                                                     </a>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </li>
-                                    <!-- Study Progarm -->
                                     <li aria-labelledby="NavLinkDepartments">
-                                        <button id="doubleDropdownButtonStudyProgarm" data-dropdown-toggle="doubleDropdownStudyProgarm"
+                                        <button id="doubleDropdownButtonStudyProgarm"
+                                            data-dropdown-toggle="doubleDropdownStudyProgarm"
                                             data-dropdown-placement="right-start" type="button"
                                             class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                             Study Program
@@ -304,12 +243,12 @@
                                                         Doctor of Philosophy(PhD)
                                                     </a>
                                                 </li>
-                                                
+
                                             </ul>
                                         </div>
                                     </li>
                                     <li>
-                                        <a href="#"
+                                        <a href="./summerSchool.html"
                                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
                                             Summer School
                                         </a>
@@ -317,16 +256,14 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- Projects -->
+
                         <li>
                             <a href="./projects.html"
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                                 Projects
                             </a>
                         </li>
-                        <!-- End Projects -->
 
-                        <!-- Centers & Laboratories -->
                         <li>
                             <button id="NavLinkDepartments" data-dropdown-toggle="dropdownNavCentersLaboratories"
                                 class="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
@@ -345,7 +282,8 @@
                                     <li>
                                         <a href="#"
                                             class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
-                                            Center of Excellence on Agricultural Economics and Rural Development (CE AERD)
+                                            Center of Excellence on Agricultural Economics and Rural Development (CE
+                                            AERD)
                                         </a>
                                     </li>
                                     <li>
@@ -375,275 +313,271 @@
                                 </ul>
                             </div>
                         </li>
-                        <!-- End Centers & Laboratories -->
 
-                        <!-- News and Events -->
                         <li>
                             <a href="./newsEvent.html"
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                                News and Events
+                                News & Events
                             </a>
                         </li>
-                        <!-- Contact Us -->
+
                         <li>
                             <a href="./contactUs.html"
                                 class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                                Contact Us
+                                Contact
                             </a>
                         </li>
                     </ul>
+                </nav>
             </div>
         </div>
-        </nav>
     </header>
 
-    <!-- ================== Drawer Navigator ================== -->
-    <!-- drawer component -->
-    <aside id="drawer-body-scrolling"
-        class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white min-w-64 max-w-[90vw] dark:bg-gray-800"
-        tabindex="-1" aria-labelledby="drawer-body-scrolling-label">
-        <h5 id="drawer-body-scrolling-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">
-            Menu</h5>
-        <button type="button" data-drawer-hide="drawer-body-scrolling" aria-controls="drawer-body-scrolling"
-            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
-            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-            </svg>
-            <span class="sr-only">Close menu</span>
-        </button>
-        <div class="py-4 overflow-y-auto">
-            <ul class="space-y-2 font-medium">
-                <!-- Home -->
-                <li>
-                    <a href="./index.html"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <span class="ms-3">Home</span>
-                    </a>
-                </li>
-                <!-- About Faculty -->
-                <li>
-                    <button type="button"
-                        class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                        aria-controls="dropdown-about" data-collapse-toggle="dropdown-about">
-                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">About Faculty</span>
-                        <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button>
-                    <ul id="dropdown-about" class="hidden py-2 space-y-2">
-                        <li>
-                            <a href="./faculty.html"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Faculty
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./mgStructure.html"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Management Structure
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./staff.html"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Staffs
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./partners.html"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Partners
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Networks
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./publication.html"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Publications
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- End About Faculty -->
+        <!-- drawer component -->
+        <aside id="drawer-body-scrolling"
+            class="fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform -translate-x-full bg-white min-w-64 max-w-[90vw] dark:bg-gray-800"
+            tabindex="-1" aria-labelledby="drawer-body-scrolling-label">
+            <h5 id="drawer-body-scrolling-label" class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400">
+                Menu</h5>
+            <button type="button" data-drawer-hide="drawer-body-scrolling" aria-controls="drawer-body-scrolling"
+                class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                </svg>
+                <span class="sr-only">Close menu</span>
+            </button>
+            <!-- Drawer Menu -->
+            <div class="py-4 overflow-y-auto">
+                <ul class="space-y-2 font-medium">
+                    <li>
+                        <a href="/"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <span class="ms-3">Home</span>
+                        </a>
+                    </li>
 
-                <!-- Departments & Study Programs -->
-                <li>
-                    <button type="button"
-                        class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                        aria-controls="dropdown-department" data-collapse-toggle="dropdown-department">
-                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Departments & Study
-                            Programs</span>
-                        <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button>
-                    <ul id="dropdown-department" class="hidden py-2 space-y-2">
-                        <!-- Department -->
-                        <li class="px-6">
-                            <button type="button"
-                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                aria-controls="dropdown-department-items"
-                                data-collapse-toggle="dropdown-department-items">
-                                <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Department</span>
-                                <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 4 4 4-4" />
-                                </svg>
-                            </button>
-                            <ul id="dropdown-department-items" class="hidden py-2 space-y-2">
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                        Department of Agricultural Economics
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                        Department of Rural Development
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                        Department of Agribusiness
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <!-- End Department -->
+                    <li>
+                        <button type="button"
+                            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            aria-controls="dropdown-about" data-collapse-toggle="dropdown-about">
+                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
+                                About Faculty
+                            </span>
+                            <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <ul id="dropdown-about" class="hidden py-2 space-y-2">
+                            <li>
+                                <a href="./faculty.html"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Faculty
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./mgStructure.html"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Management Structure
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./staff.html"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Staffs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./partners.html"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Partners
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Networks
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./publication.html"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Publications
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-                        <!-- Study Progarm -->
-                        <li class="px-6">
-                            <button type="button"
-                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                                aria-controls="dropdown-study-program" data-collapse-toggle="dropdown-study-program">
-                                <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Study
-                                    Program</span>
-                                <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 10 6">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 4 4 4-4" />
-                                </svg>
-                            </button>
-                            <ul id="dropdown-study-program" class="hidden py-2 space-y-2">
-                                <li>
-                                    <a href="./studyProgram.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                        Bachelor (BSc)
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./studyProgram.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                        Master (MSc)
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./studyProgram.html"
-                                        class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                        Doctor of Philosophy (PhD)
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="px-6">
-                            <a href="./index.html"
-                                class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Summer School</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- End Study Progarm -->
+                    <li>
+                        <button type="button"
+                            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            aria-controls="dropdown-department" data-collapse-toggle="dropdown-department">
+                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
+                                Departments & Study Programs
+                            </span>
+                            <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Departments & Study Programs Lists -->
+                        <ul id="dropdown-department" class="hidden py-2 space-y-2">
+                            <li class="px-6">
+                                <button type="button"
+                                    class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                    aria-controls="dropdown-department-items"
+                                    data-collapse-toggle="dropdown-department-items">
+                                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Department</span>
+                                    <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4" />
+                                    </svg>
+                                </button>
+                                <!-- Department items -->
+                                <ul id="dropdown-department-items" class="hidden py-2 space-y-2">
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                            Department of Agricultural Economics
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                            Department of Rural Development
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                            Department of Agribusiness
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
 
-                <!-- Projects -->
-                <li>
-                    <a href="./projects.html"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <span class="ms-3">Projects</span>
-                    </a>
-                </li>
+                            <li class="px-6">
+                                <button type="button"
+                                    class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                                    aria-controls="dropdown-study-program" data-collapse-toggle="dropdown-study-program">
+                                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
+                                        Study Program
+                                    </span>
+                                    <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 4 4 4-4" />
+                                    </svg>
+                                </button>
+                                <ul id="dropdown-study-program" class="hidden py-2 space-y-2">
+                                    <li>
+                                        <a href="./studyProgram.html"
+                                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                            Bachelor (BSc)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./studyProgram.html"
+                                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                            Master (MSc)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="./studyProgram.html"
+                                            class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                            Doctor of Philosophy (PhD)
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
 
-                <!-- Centers & Laboratories -->
-                <!-- Centers & Laboratories -->
-                <li>
-                    <button type="button"
-                        class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                        aria-controls="dropdown-center" data-collapse-toggle="dropdown-center">
-                        <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Centers & Laboratories</span>
-                        <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="m1 1 4 4 4-4" />
-                        </svg>
-                    </button>
-                    <ul id="dropdown-center" class="hidden py-2 space-y-2">
-                        <li>
-                            <a href="#"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Center of Excellence on Agricultural Economics and Rural Development (CE AERD)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Business Development Center (BDC)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Digital Economy Laboratory
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                Agroecology Living Lab
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-                                RUA Saving group
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!-- End Centers & Laboratories -->
+                            <li class="px-6">
+                                <a href="./summerSchool.html"
+                                    class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
+                                        Summer School
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
 
-                <!-- News and Events -->
-                <li>
-                    <a href="./newsEvent.html"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <span class="ms-3">News and Events</span>
-                    </a>
-                </li>
-
-                <!-- Contact Us -->
-                <li>
-                    <a href="./contactUs.html"
-                        class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <span class="ms-3">Contact Us</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-    </aside>
-    <!-- ================== End Drawer Navigator ================== -->
+                    <li>
+                        <a href="./projects.html"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <span class="ms-3">Projects</span>
+                        </a>
+                    </li>
+         
+                    <li>
+                        <button type="button"
+                            class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            aria-controls="dropdown-center" data-collapse-toggle="dropdown-center">
+                            <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
+                                Centers & Laboratories
+                            </span>
+                            <svg class="w-3 h-3 ml-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="m1 1 4 4 4-4" />
+                            </svg>
+                        </button>
+                        <!-- Centers & Laboratories items -->
+                        <ul id="dropdown-center" class="hidden py-2 space-y-2">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Center of Excellence on Agricultural Economics and Rural Development (CE AERD)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Business Development Center (BDC)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Digital Economy Laboratory
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    Agroecology Living Lab
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+                                    RUA Saving group
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="./newsEvent.html"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <span class="ms-3">News and Events</span>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="./contactUs.html"
+                            class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                            <span class="ms-3">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    <!-- ================== End:Header ================== -->
 
     <!-- ================== Slider ================== -->
     <div id="animation-carousel" class="relative w-full" data-carousel="slide">
@@ -651,23 +585,23 @@
         <div class="relative h-56 overflow-hidden sm:h-[350px] md:h-[500px]">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-linear" data-carousel-item>
-                <img src="./assets/images/slides/Picture1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="./assets/images/slides/Picture1.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-linear" data-carousel-item>
-                <img src="./assets/images/slides/Picture2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="./assets/images/slides/Picture2.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
             <!-- Item 3 -->
             <div class="hidden duration-700 ease-linear" data-carousel-item="active">
-                <img src="./assets/images/slides/Picture3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="./assets/images/slides/Picture3.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
             <!-- Item 4 -->
             <div class="hidden duration-700 ease-linear" data-carousel-item>
-                <img src="./assets/images/slides/Picture4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="./assets/images/slides/Picture4.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
             <!-- Item 5 -->
             <div class="hidden duration-700 ease-linear" data-carousel-item>
-                <img src="./assets/images/slides/Picture3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="./assets/images/slides/Picture3.jpg" class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
         </div>
         <!-- Slider controls -->
@@ -733,82 +667,66 @@
             <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 place-content-center place-items-stretch">
                 <!-- Project 1 -->
                 <article class="flex flex-col justify-between shadow-md p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-primary-900 dark:bg-gray-700 hover:scale-110 transition-all">
-                    <div>
-                        <a href="#">
-                            <img src="./assets/images/projectsImg/Picture5.jpg" class="mb-5 rounded-lg w-full h-56 sm:h-44 md:36 object-cover" alt="Image 1">
-                        </a>
+                    <a href="./articleView.html">
+                        <img src="./assets/images/projectsImg/Picture5.jpg" class="mb-5 rounded-lg w-full h-56 sm:h-44 md:36 object-cover" alt="Image 1">
                         <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white line-clamp-1">
-                            <a href="#">
                                 Agro-Ecology (Cont.)
-                            </a>
                         </h2>
                         <p class="line-clamp-4 mb-4 text-gray-500 dark:text-gray-400">
                             REDD+ project 2022-On-going “Livelihood Assessment for Keo Seima REDD+ Project in Mondulkiri province” funded by
                             Wildlife Conservation Society (WCS). -> n = 1600 HHs
                             We have 43 tablets
                         </p>
-                    </div>
-                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    </a>
+                    <a href="./articleView.html" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                         Read more
                     </a>
                 </article>
 
                 <!-- Project 2 -->
                 <article class="flex flex-col justify-between shadow-md p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-primary-900 dark:bg-gray-700 hover:scale-110 transition-all">
-                    <div>
-                        <a href="#">
-                            <img src="./assets/images/projectsImg/Picture6.jpg" class="mb-5 rounded-lg w-full h-56 sm:h-44 md:36 object-cover" alt="Image 1">
-                        </a>
+                    <a href="./articleView.html">
+                        <img src="./assets/images/projectsImg/Picture6.jpg" class="mb-5 rounded-lg w-full h-56 sm:h-44 md:36 object-cover" alt="Image 1">
                         <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white line-clamp-1">
-                            <a href="#">
                                 Livelihood
-                            </a>
                         </h2>
                         <p class="line-clamp-4 mb-4 text-gray-500 dark:text-gray-400">
                             "CC resilience and Innovation Adoption” funded by EU Recover and DCA in Cambodia, and EU-Funding.
                         </p>
-                    </div>
-                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    </a>
+                    <a href="./articleView.html" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                         Read more
                     </a>
                 </article>
 
                 <!-- Project 3 -->
                 <article class="flex flex-col justify-between shadow-md p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-primary-900 dark:bg-gray-700 hover:scale-110 transition-all">
-                    <div>
-                        <a href="#">
-                            <img src="./assets/images/projectsImg/Picture8.jpg" class="mb-5 rounded-lg w-full h-56 sm:h-44 md:36 object-cover" alt="Image 1">
-                        </a>
+                    <a href="./articleView.html">
+                        <img src="./assets/images/projectsImg/Picture8.jpg" class="mb-5 rounded-lg w-full h-56 sm:h-44 md:36 object-cover" alt="Image 1">
                         <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white line-clamp-1">
-                            <a href="#">
                                 Agri-Value Chain
-                            </a>
                         </h2>
                         <p class="line-clamp-4 mb-4 text-gray-500 dark:text-gray-400">
                             2022 –2026: Research on “Development of high nutritional value farmed fish and safe processed products (smoked and fermented fish) in Cambodia (CAMBOFISH)”, funded by ARES-Belgium.
                         </p>
-                    </div>
-                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    </a>
+                    <a href="./articleView.html" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                         Read more
                     </a>
                 </article>
 
                 <!-- Project 4 -->
                 <article class="flex flex-col justify-between shadow-md p-4 rounded-lg hover:bg-gray-100 dark:hover:bg-primary-900 dark:bg-gray-700 hover:scale-110 transition-all">
-                    <div>
-                        <a href="#">
-                            <img src="./assets/images/projectsImg/Picture9.jpg" class="mb-5 rounded-lg w-full h-56 sm:h-44 md:36 object-cover" alt="Image 1">
-                        </a>
+                    <a href="./articleView.html">
+                        <img src="./assets/images/projectsImg/Picture9.jpg" class="mb-5 rounded-lg w-full h-56 sm:h-44 md:36 object-cover" alt="Image 1">
                         <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white line-clamp-1">
-                            <a href="#">
                                 Business and Entrepreneurship training
-                            </a>
                         </h2>
                         <p class="line-clamp-4 mb-4 text-gray-500 dark:text-gray-400">
                             2021-2026: Training "Agri-Business and Entrepreneurship" to two credited class signing ceremony on Memorandum of Understanding (MoU) between SmartStart Unipreneur Learning Platform (ULM) Program between Smart Axiata Co., Ltd., IHPP (Cambodia) Co., Ltd., Impact Hub (Cambodia), Minister of Education, Youth and Sport, and Cambodian Universities including RUA.
                         </p>
-                    </div>
-                    <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                    </a>
+                    <a href="./articleView.html" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
                         Read more
                     </a>
                 </article>
@@ -954,7 +872,7 @@
     <!-- ================== End Partner ================== -->
 
 
-    <!-- ================== Footer ================== -->
+    <!-- ================== Begin:Footer ================== -->
     <footer class="bg-white dark:bg-gray-900">
         <div class="">
             <!-- Footer Top -->
@@ -964,7 +882,8 @@
                     <div>
                         <a class="flex items-center mb-6">
                             <img src="./assets/icons/logo.png" class="h-16 mr-3" alt="FlowBite Logo" />
-                            <span class="self-center text-2xl translate-y-1 font-semibold whitespace-nowrap dark:text-white">
+                            <span
+                                class="self-center text-2xl translate-y-1 font-semibold whitespace-nowrap dark:text-white">
                                 Faculty AERD
                             </span>
                         </a>
@@ -976,7 +895,8 @@
                                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                                     <li class="mb-4">
                                         <p class="hover:underline">
-                                            Royal University of Agriculture, Dongkor District, Phnom Penh, Cambodia, P.O.Box: 2696. 
+                                            Royal University of Agriculture, Dongkor District, Phnom Penh, Cambodia,
+                                            P.O.Box: 2696.
                                         </p>
                                     </li>
                                 </ul>
@@ -988,7 +908,7 @@
                                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                                     <li class="mb-4">
                                         <p class="hover:underline">
-                                            aerd@rua.edu.kh 
+                                            aerd@rua.edu.kh
                                         </p>
                                     </li>
                                 </ul>
@@ -1010,7 +930,8 @@
                     <!-- Footer Right -->
                     <div class="my-2 md:mb-0 flex flex-col md:items-center">
                         <a href="#" class="flex items-center mb-6">
-                            <span class="self-center text-2xl md:translate-y-5 md:mb-5 font-semibold whitespace-nowrap dark:text-white">
+                            <span
+                                class="self-center text-2xl md:translate-y-5 md:mb-5 font-semibold whitespace-nowrap dark:text-white">
                                 OUR LINKS
                             </span>
                         </a>
@@ -1047,33 +968,33 @@
                                         d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
                                 </svg>
                             </a>
-                            
+
                         </div>
                     </div>
                     <!-- End Footer Left -->
-                
+
                 </div>
             </div>
-            
+
             <!-- Footer Bottom -->
             <div class="p-4 py-6 lg:py-8 border-t">
                 <div class="sm:flex sm:items-center sm:justify-between mx-auto w-full max-w-screen-xl">
                     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                         © Copyright <strong>Faculty AERD</strong>. All Rights Reserved
                     </span>
-
+                    <!-- 
                     <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
                         Developed By: Parrot Studio
-                    </span>
-                    
+                    </span> -->
+
                 </div>
             </div>
         </div>
     </footer>
-    <!-- ================== End Footer ================== -->
+    <!-- ================== End:Footer ================== -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.0.0/flowbite.min.js"></script>
-    <script src="./js/darkMode.js"></script>
+    <script src="./assets/js/flowbite.js"></script>
+    <script src="./assets/js/darkMode.js"></script>
 </body>
 
 </html>
